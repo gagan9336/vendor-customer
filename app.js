@@ -9,7 +9,9 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const methodOverride = require("method-override");
 
-mongoose.connect("mongodb://localhost:27017/Vendor_customer", { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false });
+const URI = 'mongodb+srv://gagan:gagan@cluster0.9oluq.mongodb.net/<dbname>?retryWrites=true&w=majority';
+
+mongoose.connect(URI || "mongodb://localhost:27017/Vendor_customer", { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false });
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
