@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor-User</title>
+        <!-- font stylesheet -->
+        
+        <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+        <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+        <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1a5f7041d2.js" crossorigin="anonymous"></script>
+        
+        <!-- bootstrap stylesheet -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <style>
+          .back {
+            background-image: linear-gradient(to right,#114357, #F29492);
+          }
+        </style>
+
+            <script type="text/javascript">
+                /*code: 48-57 Numbers*/
+                function restrictAlphabets(e) {
+                    var x = e.which || e.keycode;
+                    if ((x >= 48 && x <= 57))
+                        return true;
+                    else
+                        return false;
+                }
+            </script>
+
+</head>
+<body>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/product">Vendor-<em>Customer</em></a>
+      <a class="navbar-brand" href="/product/new"><i class="fas fa-plus-square"></i> New Post<span class="sr-only">(current)</span></a>
+      <div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+          <a class="nav-link" href="/logout">>LogOut</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    

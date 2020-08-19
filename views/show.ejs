@@ -1,0 +1,40 @@
+<%-include("./partials/header-vendor")%>
+
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-3"><i class="fas fa-campground"></i> Welcome Vendor!!!</h1>
+        <!-- <a href="/campGround/new"><button>New post</button></a> -->
+        <p>
+            View Our Hand-Picked Products From All Over The World
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="" style="padding-right: 0px; padding-left: 0px; height:525px;">
+                <div>
+                    <!-- <div class="row text-center" style="display: flex; flex-wrap: wrap;"> -->
+                    <% item.forEach((campGround)=>{%>
+                    <div class="card-deck " style="padding-left: 0;">
+                        <div class="card mb-3">
+                            <img src="<%=campGround.image %>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h4 class="float-right">$ <%= campGround.price%></h4>
+                                <h5 class="card-title">---<%= campGround.name%>---</h5>
+                            </div>
+                            <p class="card-text">
+                                <%= campGround.description%>
+                            </p>
+                        </div>
+                    </div>
+                    <% }); %>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<%-include("./partials/footer")%>
