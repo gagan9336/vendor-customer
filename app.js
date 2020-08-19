@@ -11,7 +11,7 @@ const methodOverride = require("method-override");
 
 const URI = 'mongodb+srv://gagan:gagan@cluster0.9oluq.mongodb.net/<dbname>?retryWrites=true&w=majority';
 
-mongoose.connect( process.env.URI || "mongodb://localhost:27017/Vendor_customer", { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false });
+mongoose.connect( URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false });
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
