@@ -11,7 +11,7 @@ const methodOverride = require("method-override");
 
 const URI = 'mongodb+srv://gagan:gagan@cluster0.9oluq.mongodb.net/<dbname>?retryWrites=true&w=majority';
 
-mongoose.connect( URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false });
+mongoose.connect( process.env.URI || "mongodb://localhost:27017/Vendor_customer", { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false });
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -97,10 +97,10 @@ app.get('/customer/login', (req, res) => {
 //user login
 app.post('/customer/login', async (req, res) => {
     try {
-        const user = await User.findByCredentials(req.body.email, req.body.password);
-        res.send('done');
-    } catch (e) {
+        const user = await User1.findByCredentials(req.body.email, req.body.password)
         res.redirect('/product/customer');
+    } catch (error) {
+        res.status(404).redirect('/customer/login');
     }
 });
 

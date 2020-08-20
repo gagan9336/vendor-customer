@@ -31,6 +31,22 @@ userSchema1.statics.findByCredentials = async (email, password) => {
     return user;
 }
 
+userSchema1.statics.findByCredentials = async (email, password) => {
+    const user = await User1.findOne({ email });
+
+    if (!user) {
+        throw console.log('email wrong');
+    }
+
+    const isMatch = await bycrypt.compare(password, user.password);
+
+    if (!isMatch) {
+       throw console.log('password wrong');
+    }
+
+    return user;
+}
+
 userSchema1.pre('save', async function (next) {
     const user = this;
 
@@ -42,4 +58,6 @@ userSchema1.pre('save', async function (next) {
     next();
 });
 
-module.exports = mongoose.model("User1", userSchema1);
+    const User1 = mongoose.model('User1', userSchema1)
+
+module.exports = User1;
