@@ -9,15 +9,13 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const methodOverride = require("method-override");
 
-const URI = 'mongodb+srv://gagan:gagan@cluster0.9oluq.mongodb.net/vendor-customer?retryWrites=true&w=majority';
-
-mongoose.connect( process.env.URI || "mongodb://localhost:27017/Vendor_customer", { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false });
+mongoose.connect(process.env.MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false });
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 
-const port = process.env.PORT || 1234;
+const port = process.env.PORT
 
 app.use(passport.initialize());
 app.use(passport.session());
