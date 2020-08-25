@@ -1,8 +1,6 @@
 var mongoose = require("mongoose");
 const bycrypt = require('bcryptjs');
 
-
-
 var userSchema1 = new mongoose.Schema({
     email: {
         type: String,
@@ -26,7 +24,7 @@ userSchema1.statics.findByCredentials = async (email, password) => {
     }
     const isMatch = await bycrypt.compare(password, user.password)
     if (!isMatch) {
-        throw new Error ('unable to log in');
+        throw new Error('unable to log in');
     }
     return user;
 }
@@ -41,7 +39,7 @@ userSchema1.statics.findByCredentials = async (email, password) => {
     const isMatch = await bycrypt.compare(password, user.password);
 
     if (!isMatch) {
-       throw console.log('password wrong');
+        throw console.log('password wrong');
     }
 
     return user;
@@ -58,6 +56,6 @@ userSchema1.pre('save', async function (next) {
     next();
 });
 
-    const User1 = mongoose.model('User1', userSchema1)
+const User1 = mongoose.model('User1', userSchema1)
 
 module.exports = User1;

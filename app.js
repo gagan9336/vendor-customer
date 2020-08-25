@@ -12,7 +12,7 @@ const methodOverride = require("method-override");
 mongoose.connect(process.env.MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false });
 
 app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
 const port = process.env.PORT
@@ -109,7 +109,7 @@ app.get('/product', (req, res) => {
         if (err) {
             console.log(err);
         } else {
-            res.render('show', { item: item, currentUser: req.user});
+            res.render('show', { item: item, currentUser: req.user });
         }
     })
 })

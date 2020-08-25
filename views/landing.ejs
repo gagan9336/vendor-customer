@@ -6,94 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendor-Customer</title>
     <!-- font stylesheet -->
-
-    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
-    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
-    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/1a5f7041d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- bootstrap stylesheet -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        <style>
-            .container,
-            .row {
-                height: 100%;
-                min-height: 100%;
-            }
-        
-            html,
-            body {
-                height: 100%;
-                background-image: linear-gradient(to right, #eb5757, black);
-            }
-        </style>
+    <style>
+        .container,
+        .row {
+            height: 100%;
+            min-height: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-image: linear-gradient(to right, #eb5757, black);
+        }
+
+        .word-wrap {
+            word-wrap: break-word;
+        }
+    </style>
 
 </head>
+
 <body>
     <nav class="navbar justify-content-center navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Vendor-Customer</a>
     </nav>
     <div class="container">
         <div class="row justify-content-center align-items-center">
-            <div class="col-4 text-center">
-                <button type="button" id="button" data-toggle="modal" data-target="#myModal2" class="btn btn-outline-primary btn-lg">Hey! I am Customer.</button>
+            <div class="word-wrap col-4  text-center">
+                <button type="button" id="button" data-toggle="modal" data-target="#myModal2"
+                    class="btn btn-outline-primary btn-lg btn-block"><span class="d-none d-sm-block">Hey! I am Customer
+                    </span><i style="font-size: 50px;" class="fa fa-shopping-basket"></i></button>
             </div>
-            <div class="col-4 text-center">
-                <button type="button" id="button1" data-toggle="modal" data-target="#myModal1" class="btn btn-outline-secondary btn-lg">Hey! I am Vendor.</button>
+            <div class="word-wrap col-4 text-center">
+                <button type="button" id="button1" data-toggle="modal" data-target="#myModal1"
+                    class="btn btn-outline-secondary btn-lg btn-block"><span class="d-none d-sm-block">Hey! I am Vendor
+                    </span><i style="font-size: 50px;" class="fa fa-shopping-cart"></i></button>
             </div>
         </div>
     </div>
-    
+
     <!-- The Modal 1 -->
     <div class="modal fade" id="myModal1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                    <!-- Modal header -->
-                    <div class="modal-header">
-                        <h4 class="align-items-center modal-title">Are You Vendor?</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-    
+                <!-- Modal header -->
+                <div class="modal-header">
+                    <h4 class="align-items-center modal-title">Are You Vendor?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
                 <!-- Modal body -->
                 <div class="modal-body">
-                        <form action="/vendor/register">
-                            <button type="submit" class="float-left btn btn-success">Sign Up</button>
-                        </form>
-                        <form action="/vendor/login">
-                            <button type="submit" class="float-right btn btn-primary">Log In</button>
-                        </form>
+                    <form action="/vendor/register">
+                        <button type="submit" class="float-left btn btn-success">Sign Up</button>
+                    </form>
+                    <form action="/vendor/login">
+                        <button type="submit" class="float-right btn btn-primary">Log In</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-        <!-- The Modal 2 -->
-        <div class="modal fade" id="myModal2">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <!-- Modal header -->
-                    <div class="modal-header">
-                        <h4 class="align-items-center modal-title">Are You Customer?</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-        
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <form action="/customer/register">
-                            <button type="submit" class="float-left btn btn-success">Sign Up</button>
-                        </form>
-                        <form action="/customer/login">
-                            <button type="submit" class="float-right btn btn-primary">Log In</button>
-                        </form>
-                    </div>
+    <!-- The Modal 2 -->
+    <div class="modal fade" id="myModal2">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Modal header -->
+                <div class="modal-header">
+                    <h4 class="align-items-center modal-title">Are You Customer?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/customer/register">
+                        <button type="submit" class="float-left btn btn-success">Sign Up</button>
+                    </form>
+                    <form action="/customer/login">
+                        <button type="submit" class="float-right btn btn-primary">Log In</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
 </body>
+
 </html>

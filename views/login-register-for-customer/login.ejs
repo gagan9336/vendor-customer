@@ -1,24 +1,64 @@
 <%-include("../partials/header2")%>
 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-<div class="mt-5">
-    <h1 style="text-align: center;">--LOGIN--</h1>
-    <div style="width: 30%; margin:25px auto;">
-        <form action="/customer/login" method="POST">
-            <div class="form-group">
-                <label>Email address</label>
-                <input type="email" name="email" class="form-control" placeholder="Email" autocomplete="off">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Log-in Customer</title>
+    <link rel="stylesheet" href="../css/new.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+            <div class="user_card">
+                <div class="d-flex justify-content-center">
+                    <div class="brand_logo_container">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/pinterest-circle-logo-png-transparent.png"
+                            class="brand_logo" alt="Logo">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center form_container">
+                    <form action="/customer/login" method="POST">
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="email" name="email" placeholder="Email" autocomplete="off"
+                                class="form-control input_user">
+                        </div>
+                        <div class="input-group mb-2">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" name="password" placeholder="password" autocomplete="off"
+                                class="form-control input_pass">
+                        </div>
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                            <button type="button" name="button" class="btn login_btn">Login</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="mt-4">
+                    <div class="d-flex justify-content-center links">
+                        Don't have an account? <a href="/customer/register" class="ml-2">Sign Up</a>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="password" class="form-control" autocomplete="off">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Submit</button>
-        </form>
-        <a style=" float: center;" href="/"><button style="border: none; background-color: transparent;">Go
-                back!!!</button></a>
+        </div>
     </div>
-</div>
+</body>
 
-<%-include("../partials/footer")%>
+</html>
